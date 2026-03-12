@@ -66,6 +66,7 @@ Developed an Optimization Solver Model to redistribute shipment volumes across t
 - MOQ (Minimum Order Quantity) of 30 shipments/month per 3PL to maintain logistics cost-efficiency
 
 **Objective:** Minimize the total number of failed cases (Late & Damaged). Because of Power Model properties, when the number of cases fail decrese, the results improve.
+![after](image/after.jpg)
 ![result](image/result.jpg)
 
 
