@@ -38,10 +38,11 @@ The analysis was built on 8 integrated datasets processed via Power Query and Po
 ## Methodology
 **1. Descriptive**  
 After discuss with teamate, we decided Customer Satisfaction Index was established using a weighted formula:  
-  %CS = 0.62⋅COF + 0.18⋅Tracking + 0.12⋅OnTime + 0.08⋅InFull
+  **%CS = 0.62⋅COF + 0.18⋅Tracking + 0.12⋅OnTime + 0.08⋅InFull**
 where:
 ![meaning](image/xi_yi.jpg)
 
+Then we created the dashboard, it can use for descriptive and also check details in next year dataset.
 ![dashboard](image/descriptive_db.jpg)
 
 **Insight:** Initial 2025 baseline %CS was confirmed at **61.75%**
@@ -51,14 +52,16 @@ Used a Power Model (y=a⋅x^b) to project 2026 targets
 ![power](image/power_chart_eg.jpg)
 ![power_explain](image/power_explain.jpg)
 
-Strategy: Transformed yearly models into monthly KPI targets to ensure a gradual climb toward 99% fulfillment by late 2026  
-Scenario: Simulated the impact of introducing an ERP/Tracking solution in August 2026
+**Strategy:** Transformed yearly models into monthly KPI targets to ensure a gradual climb toward 99% fulfillment by late 2026  
+**Scenario:** Simulated the impact of introducing an ERP/Tracking solution in August 2026
+
+After that, we created predictive dashboard for tracking each KPI monthly. To track monthly, we need transform Power Model yearly to monthly by mutiple function with 12^b.
 ![p_dashboard](image/predictive_db.jpg)
 
 
 **3. Prescriptive**  
 Developed an Optimization Solver Model to redistribute shipment volumes across the 9 3PLs based on their historical performance  
-Constraints:
+**Constraints:**
 - Pareto Theory (80% volume to top 3 partners)
 - MOQ (Minimum Order Quantity) of 30 shipments/month per 3PL to maintain logistics cost-efficiency
 
@@ -74,9 +77,9 @@ Immediate Improvement: By simply optimizing 3PL distribution, %Customer Satisfac
 - Product Damage decreased by 21.25%
 - Global Late cases decreased by 45.61%
 
-Long-term Goal: With the integration of the Tracking Solution in August 2026, the model projects %CS reaching **85.81%**
+**Long-term Goal:** With the integration of the Tracking Solution in August 2026, the model projects %CS reaching **85.81%**
 
 ## Tools
-Data Processing: Power Query
-Visualization: Power BI (DAX)
-Optimization: Excel (Solver)
+- Data Processing: Power Query
+- Visualization: Power BI (DAX)
+- Optimization: Excel (Solver)
